@@ -1,13 +1,15 @@
 # recommender.py
 
 import pandas as pd
+import os
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 
 def load_data():
     """Load and prepare the MovieLens dataset."""
-    movies = pd.read_csv('data/movies.csv')
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    movies = pd.read_csv(os.path.join(base_dir, 'data', 'movies.csv'))
     
     # Clean genres — replace pipe separator with space
     movies['genres_clean'] = movies['genres'].str.replace('|', ' ', regex=False)
