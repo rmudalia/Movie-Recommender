@@ -3,4 +3,4 @@ scikit-learn
 streamlit
 requests
 notebook
-python-dotenv
+#python-dotenv

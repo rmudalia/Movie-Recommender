@@ -14,3 +14,5 @@ __pycache__/
 
 # Data folder (optional — only add this if your CSV files are large)
 data/
+
+.streamlit/secrets.toml

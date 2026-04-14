@@ -1,11 +1,13 @@
 # tmdb.py
-import os
+
 import requests
-from dotenv import load_dotenv
+import streamlit as st
+import re
 
-load_dotenv()
 
-TMDB_API_KEY = os.getenv("TMDB_API_KEY", "")
+
+
+TMDB_API_KEY = st.secrets["TMDB_API_KEY"]
 BASE_URL = "https://api.themoviedb.org/3"
 IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500"
 PLACEHOLDER = "https://via.placeholder.com/500x750?text=No+Poster"
